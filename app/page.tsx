@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import EnhancedLoader from "@/components/enhanced-loader"
-import EnhancedNavigation from "@/components/enhanced-navigation"
+import Navigation from "@/components/navigation"
 import HeroSection from "@/components/hero-section"
 import EnhancedArtGrid from "@/components/enhanced-art-grid"
 import EnhancedMarquee from "@/components/enhanced-marquee"
@@ -43,7 +43,7 @@ export default function HomePage() {
           className="min-h-screen bg-black text-white relative overflow-hidden"
         >
           <InteractiveBackground />
-          <EnhancedNavigation />
+          <Navigation />
 
           <main>
             <HeroSection />
