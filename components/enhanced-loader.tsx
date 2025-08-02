@@ -32,7 +32,7 @@ export default function EnhancedLoader({ onLoadingComplete }: { onLoadingComplet
         transition={{ duration: 0.8, ease: "easeInOut" }}
         className="fixed inset-0 z-50 flex flex-col items-center justify-center bg-black text-white"
       >
-        <div className="text-center relative">
+        <div className="text-center relative max-w-md mx-auto">
           {/* Main Counter */}
           <motion.div 
             className="relative font-bold text-8xl md:text-9xl mb-8"
@@ -54,22 +54,24 @@ export default function EnhancedLoader({ onLoadingComplete }: { onLoadingComplet
             Your Digital Experience Is Loading
           </motion.p>
 
-          {/* Progress Bar */}
-          <div className="w-64 h-1 bg-gray-800 rounded-full overflow-hidden">
-            <motion.div
-              className="h-full bg-gradient-to-r from-purple-500 to-blue-500"
-              initial={{ width: 0 }}
-              animate={{ width: `${count}%` }}
-              transition={{ duration: 0.3, ease: "easeOut" }}
-            />
+          {/* Progress Bar Container */}
+          <div className="w-full max-w-sm mx-auto mb-8">
+            <div className="w-full h-2 bg-gray-800 rounded-full overflow-hidden">
+              <motion.div
+                className="h-full bg-gradient-to-r from-purple-500 to-blue-500 rounded-full"
+                initial={{ width: 0 }}
+                animate={{ width: `${count}%` }}
+                transition={{ duration: 0.3, ease: "easeOut" }}
+              />
+            </div>
           </div>
 
           {/* Loading Dots */}
-          <div className="flex justify-center mt-6 space-x-2">
+          <div className="flex justify-center space-x-3">
             {[0, 1, 2].map((i) => (
               <motion.div
                 key={i}
-                className="w-2 h-2 bg-white rounded-full"
+                className="w-3 h-3 bg-white rounded-full"
                 animate={{ 
                   scale: [1, 1.5, 1],
                   opacity: [0.5, 1, 0.5]
