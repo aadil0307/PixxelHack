@@ -99,9 +99,8 @@ export default function EnhancedTeamSection() {
         <motion.h2 
           className="text-4xl md:text-5xl font-bold mb-8"
           initial={{ opacity: 0, x: 50 }}
-          whileInView={{ opacity: 1, x: 0 }}
+          animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
         >
           Our Curators
         </motion.h2>
@@ -115,13 +114,12 @@ export default function EnhancedTeamSection() {
             }}
             className="p-6 border-l-4 border-transparent hover:border-gradient-to-b from-purple-500 to-blue-500 transition-all duration-300 cursor-pointer group"
             initial={{ opacity: 0, x: 50 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            animate={{ opacity: 1, x: 0 }}
             transition={{ 
               duration: 0.6, 
               delay: index * 0.1,
               ease: "easeOut"
             }}
-            viewport={{ once: true }}
             whileHover={{ 
               x: 10,
               transition: { duration: 0.3 }
@@ -166,9 +164,8 @@ export default function EnhancedTeamSection() {
         <motion.div
           className="mt-12 p-6 bg-gradient-to-r from-gray-900 to-gray-800 rounded-lg"
           initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.5 }}
-          viewport={{ once: true }}
         >
           <h3 className="text-xl font-semibold mb-4">Team Stats</h3>
           <div className="grid grid-cols-2 gap-4">
@@ -182,9 +179,8 @@ export default function EnhancedTeamSection() {
                 key={stat.label}
                 className="text-center"
                 initial={{ opacity: 0, scale: 0.9 }}
-                whileInView={{ opacity: 1, scale: 1 }}
+                animate={{ opacity: 1, scale: 1 }}
                 transition={{ delay: index * 0.1 }}
-                viewport={{ once: true }}
               >
                 <div className="text-2xl font-bold text-purple-400">{stat.value}</div>
                 <div className="text-sm text-gray-400">{stat.label}</div>

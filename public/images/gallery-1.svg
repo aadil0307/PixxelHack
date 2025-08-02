@@ -1,11 +1,11 @@
 <svg width="600" height="600" xmlns="http://www.w3.org/2000/svg">
     <defs>
       <linearGradient id="gradgallery-1" x1="0%" y1="0%" x2="100%" y2="100%">
-        <stop offset="0%" style="stop-color:hsl(294.1436010109302, 70%, 60%);stop-opacity:1" />
-        <stop offset="50%" style="stop-color:hsl(221.82722835176327, 70%, 60%);stop-opacity:1" />
-        <stop offset="100%" style="stop-color:hsl(80.60984201782325, 70%, 60%);stop-opacity:1" />
+        <stop offset="0%" style="stop-color:hsl(144.4632421894814, 70%, 60%);stop-opacity:1" />
+        <stop offset="50%" style="stop-color:hsl(79.02610656748352, 70%, 60%);stop-opacity:1" />
+        <stop offset="100%" style="stop-color:hsl(64.04554864651021, 70%, 60%);stop-opacity:1" />
       </linearGradient>
     </defs>
     <rect width="600" height="600" fill="url(#gradgallery-1)"/>
-    <circle cx="381.67654825285837" cy="330.48793851812616" r="50.04361416354399" fill="rgba(255,255,255,0.2)"/>
+    <circle cx="396.77142957324673" cy="303.0030472915795" r="96.49104508719932" fill="rgba(255,255,255,0.2)"/>
   </svg>

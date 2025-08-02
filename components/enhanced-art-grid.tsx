@@ -1,7 +1,6 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { useInView } from "react-intersection-observer";
 import Image from "next/image";
 import { featuredNFTs } from "@/lib/data";
 
@@ -28,17 +27,11 @@ const itemVariants = {
 };
 
 export default function EnhancedArtGrid() {
-  const [ref, inView] = useInView({
-    triggerOnce: true,
-    threshold: 0.1,
-  });
-
   return (
     <motion.div
-      ref={ref}
       variants={containerVariants}
       initial="hidden"
-      animate={inView ? "visible" : "hidden"}
+      animate="visible"
       className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 p-8"
     >
       {featuredNFTs.map((artwork, index) => (
