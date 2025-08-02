@@ -9,12 +9,12 @@ import { featuredArtists as artistsData } from "@/lib/data"
 const featuredArtists = artistsData.map((artist, index) => ({
   id: artist.id,
   name: artist.name,
-  specialty: artist.bio.split(' ').slice(0, 3).join(' '),
-  bio: artist.bio,
-  artworks: artist.artworks,
-  totalSales: `${Math.floor(Math.random() * 200 + 50)}.${Math.floor(Math.random() * 9 + 1)} ETH`,
-  image: artist.avatar,
-  hoverImage: artist.avatar,
+  specialty: artist.specialty,
+  bio: `${artist.name} is a ${artist.specialty} artist with ${artist.totalSales} in total sales.`,
+  artworks: Math.floor(Math.random() * 50 + 20), // Generate random artwork count
+  totalSales: artist.totalSales,
+  image: artist.image,
+  hoverImage: artist.hoverImage,
 }))
 
 export default function FeaturedArtists() {

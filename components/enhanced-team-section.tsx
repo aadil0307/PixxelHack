@@ -20,7 +20,7 @@ export default function EnhancedTeamSection() {
               initial={{ opacity: 0, scale: 0.9, rotateY: -15 }}
               animate={{ opacity: 1, scale: 1, rotateY: 0 }}
               exit={{ opacity: 0, scale: 0.9, rotateY: 15 }}
-              transition={{ duration: 0.5, ease: 'easeInOut' }}
+              transition={{ duration: 0.5, ease: "easeInOut" }}
               className="absolute inset-0"
             >
               <Image
@@ -29,44 +29,44 @@ export default function EnhancedTeamSection() {
                 fill
                 className="object-cover rounded-lg shadow-2xl"
               />
-              
+
               {/* Glow Effect */}
               <div className="absolute inset-0 rounded-lg bg-gradient-to-br from-purple-500/20 to-blue-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
             </motion.div>
           </AnimatePresence>
-          
+
           {/* Floating Elements */}
           <motion.div
             className="absolute -top-4 -right-4 w-8 h-8 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full"
-            animate={{ 
+            animate={{
               y: [0, -10, 0],
-              scale: [1, 1.1, 1]
+              scale: [1, 1.1, 1],
             }}
-            transition={{ 
-              duration: 3, 
+            transition={{
+              duration: 3,
               repeat: Infinity,
-              ease: "easeInOut"
+              ease: "easeInOut",
             }}
           />
           <motion.div
             className="absolute -bottom-4 -left-4 w-6 h-6 bg-gradient-to-r from-pink-500 to-red-500 rounded-full"
-            animate={{ 
+            animate={{
               y: [0, 10, 0],
-              scale: [1, 1.2, 1]
+              scale: [1, 1.2, 1],
             }}
-            transition={{ 
-              duration: 2.5, 
+            transition={{
+              duration: 2.5,
               repeat: Infinity,
               ease: "easeInOut",
-              delay: 1
+              delay: 1,
             }}
           />
         </div>
       </div>
-      
+
       {/* Right side: List of names */}
       <div className="flex flex-col justify-center space-y-6 pt-16">
-        <motion.h2 
+        <motion.h2
           className="text-4xl md:text-5xl font-bold mb-8"
           initial={{ opacity: 0, x: 50 }}
           animate={{ opacity: 1, x: 0 }}
@@ -74,7 +74,7 @@ export default function EnhancedTeamSection() {
         >
           Our Curators
         </motion.h2>
-        
+
         {featuredArtists.map((member, index) => (
           <motion.div
             key={member.id}
@@ -85,40 +85,40 @@ export default function EnhancedTeamSection() {
             className="p-6 border-l-4 border-transparent hover:border-gradient-to-b from-purple-500 to-blue-500 transition-all duration-300 cursor-pointer group"
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
-            transition={{ 
-              duration: 0.6, 
+            transition={{
+              duration: 0.6,
               delay: index * 0.1,
-              ease: "easeOut"
+              ease: "easeOut",
             }}
-            whileHover={{ 
+            whileHover={{
               x: 10,
-              transition: { duration: 0.3 }
+              transition: { duration: 0.3 },
             }}
           >
-            <motion.p 
+            <motion.p
               className="text-3xl font-semibold mb-2 group-hover:text-purple-400 transition-colors"
               whileHover={{ scale: 1.02 }}
             >
               {member.name}
             </motion.p>
-            <motion.p 
+            <motion.p
               className="text-lg text-neutral-400 mb-3 group-hover:text-blue-400 transition-colors"
               whileHover={{ scale: 1.01 }}
             >
               {member.specialty}
             </motion.p>
-            <motion.p 
+            <motion.p
               className="text-sm text-neutral-500 leading-relaxed"
               initial={{ opacity: 0, height: 0 }}
-              animate={{ 
+              animate={{
                 opacity: activeMember.id === member.id ? 1 : 0.7,
-                height: "auto"
+                height: "auto",
               }}
               transition={{ duration: 0.3 }}
             >
               Total Sales: {member.totalSales}
             </motion.p>
-            
+
             {/* Hover Indicator */}
             <motion.div
               className="absolute left-0 top-0 w-1 h-full bg-gradient-to-b from-purple-500 to-blue-500"
@@ -129,7 +129,7 @@ export default function EnhancedTeamSection() {
             />
           </motion.div>
         ))}
-        
+
         {/* Stats Section */}
         <motion.div
           className="mt-12 p-6 bg-gradient-to-r from-gray-900 to-gray-800 rounded-lg"
@@ -143,7 +143,7 @@ export default function EnhancedTeamSection() {
               { label: "Years Experience", value: "50+" },
               { label: "Artworks Curated", value: "1000+" },
               { label: "Artists Supported", value: "200+" },
-              { label: "Exhibitions", value: "25+" }
+              { label: "Exhibitions", value: "25+" },
             ].map((stat, index) => (
               <motion.div
                 key={stat.label}
@@ -152,7 +152,9 @@ export default function EnhancedTeamSection() {
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ delay: index * 0.1 }}
               >
-                <div className="text-2xl font-bold text-purple-400">{stat.value}</div>
+                <div className="text-2xl font-bold text-purple-400">
+                  {stat.value}
+                </div>
                 <div className="text-sm text-gray-400">{stat.label}</div>
               </motion.div>
             ))}
@@ -161,4 +163,4 @@ export default function EnhancedTeamSection() {
       </div>
     </div>
   );
-} 
+}
