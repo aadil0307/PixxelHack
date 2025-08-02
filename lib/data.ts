@@ -15,6 +15,10 @@ export interface Artist {
   totalSales: string;
   image: string;
   hoverImage: string;
+  followers?: number;
+  artworks?: number;
+  bio?: string;
+  avatar?: string;
 }
 
 export interface Collection {
@@ -23,6 +27,8 @@ export interface Collection {
   artist: string;
   pieces: number;
   image: string;
+  title?: string;
+  description?: string;
 }
 
 // Featured NFTs - Mix of real images and SVGs
@@ -127,6 +133,10 @@ export const featuredArtists: Artist[] = [
     totalSales: "150 ETH",
     image: "/real-images/artist-real-1.jpg",
     hoverImage: "/images/artist-1.svg",
+    followers: 12500,
+    artworks: 45,
+    bio: "Pioneering digital artist known for ethereal portraits that blend human emotion with digital aesthetics.",
+    avatar: "/real-images/artist-real-1.jpg",
   },
   {
     id: 2,
@@ -135,6 +145,10 @@ export const featuredArtists: Artist[] = [
     totalSales: "200 ETH",
     image: "/images/artist-2.svg",
     hoverImage: "/real-images/artist-real-2.jpg",
+    followers: 18900,
+    artworks: 67,
+    bio: "Abstract expressionist pushing the boundaries of digital color theory and emotional expression.",
+    avatar: "/images/artist-2.svg",
   },
   {
     id: 3,
@@ -143,6 +157,10 @@ export const featuredArtists: Artist[] = [
     totalSales: "180 ETH",
     image: "/real-images/artist-real-3.jpg",
     hoverImage: "/images/artist-3.svg",
+    followers: 15600,
+    artworks: 89,
+    bio: "Generative art specialist creating algorithmic masterpieces that evolve with blockchain technology.",
+    avatar: "/real-images/artist-real-3.jpg",
   },
   {
     id: 4,
@@ -151,6 +169,10 @@ export const featuredArtists: Artist[] = [
     totalSales: "120 ETH",
     image: "/images/artist-4.svg",
     hoverImage: "/real-images/artist-real-4.jpg",
+    followers: 9200,
+    artworks: 34,
+    bio: "Blockchain-native artist exploring the intersection of cryptography and visual storytelling.",
+    avatar: "/images/artist-4.svg",
   },
 ];
 
@@ -178,6 +200,9 @@ export const collections: Collection[] = [
     artist: "Eleanor Vance",
     pieces: 25,
     image: "/real-images/nft-real-2.jpg",
+    title: "Digital Renaissance",
+    description:
+      "A collection exploring the rebirth of classical themes in the digital age.",
   },
   {
     id: 2,
@@ -185,6 +210,9 @@ export const collections: Collection[] = [
     artist: "Marcus Thorne",
     pieces: 30,
     image: "/images/nft-3.svg",
+    title: "Abstract Universe",
+    description:
+      "Vibrant abstract compositions that challenge perception and reality.",
   },
   {
     id: 3,
@@ -192,6 +220,9 @@ export const collections: Collection[] = [
     artist: "Aria Chen",
     pieces: 20,
     image: "/real-images/nft-real-4.jpg",
+    title: "Neon Dreams",
+    description:
+      "Cyberpunk-inspired pieces that blend neon aesthetics with dreamlike narratives.",
   },
   {
     id: 4,
@@ -199,6 +230,9 @@ export const collections: Collection[] = [
     artist: "Sarah Kim",
     pieces: 15,
     image: "/images/nft-5.svg",
+    title: "Minimalist Zen",
+    description:
+      "Meditative minimalism that finds beauty in simplicity and space.",
   },
   {
     id: 5,
@@ -206,6 +240,9 @@ export const collections: Collection[] = [
     artist: "Dr. Quantum",
     pieces: 40,
     image: "/real-images/nft-real-6.jpg",
+    title: "Quantum Art",
+    description:
+      "Scientific art that visualizes quantum mechanics and particle physics.",
   },
   {
     id: 6,
@@ -213,6 +250,9 @@ export const collections: Collection[] = [
     artist: "Vintage Vox",
     pieces: 35,
     image: "/images/nft-1.svg",
+    title: "Retro Future",
+    description:
+      "Nostalgic visions of the future through retro-futuristic aesthetics.",
   },
 ];
 

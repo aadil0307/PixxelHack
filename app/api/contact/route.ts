@@ -1,40 +1,40 @@
-import { NextRequest, NextResponse } from 'next/server'
-import nodemailer from 'nodemailer'
+import { NextRequest, NextResponse } from "next/server";
+import nodemailer from "nodemailer";
 
 export async function POST(request: NextRequest) {
   try {
-    const { name, email, subject, message } = await request.json()
+    const { name, email, subject, message } = await request.json();
 
     // Validate required fields
     if (!name || !email || !subject || !message) {
       return NextResponse.json(
-        { error: 'All fields are required' },
+        { error: "All fields are required" },
         { status: 400 }
-      )
+      );
     }
 
     // Validate email format
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(email)) {
       return NextResponse.json(
-        { error: 'Invalid email format' },
+        { error: "Invalid email format" },
         { status: 400 }
-      )
+      );
     }
 
     // Create transporter using Gmail SMTP
     const transporter = nodemailer.createTransporter({
-      service: 'gmail',
+      service: "gmail",
       auth: {
         user: process.env.EMAIL_USER, // Your Gmail address
-        pass: process.env.EMAIL_PASS  // Your Gmail app password
-      }
-    })
+        pass: process.env.EMAIL_PASS, // Your Gmail app password
+      },
+    });
 
     // Email content
     const mailOptions = {
       from: process.env.EMAIL_USER,
-      to: 'hello@pixxelhack.com', // Your email where you want to receive messages
+      to: "aadilshaikh2164@gmail.com", // Your email where you want to receive messages
       subject: `Contact Form: ${subject} - ${name}`,
       html: `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
@@ -51,7 +51,10 @@ export async function POST(request: NextRequest) {
           
           <div style="background-color: #fff; padding: 20px; border: 1px solid #dee2e6; border-radius: 8px;">
             <h3 style="color: #333; margin-top: 0;">Message</h3>
-            <p style="line-height: 1.6; color: #555;">${message.replace(/\n/g, '<br>')}</p>
+            <p style="line-height: 1.6; color: #555;">${message.replace(
+              /\n/g,
+              "<br>"
+            )}</p>
           </div>
           
           <div style="margin-top: 30px; padding-top: 20px; border-top: 1px solid #dee2e6; color: #6c757d; font-size: 14px;">
@@ -59,22 +62,21 @@ export async function POST(request: NextRequest) {
             <p>Time: ${new Date().toLocaleString()}</p>
           </div>
         </div>
-      `
-    }
+      `,
+    };
 
     // Send email
-    await transporter.sendMail(mailOptions)
+    await transporter.sendMail(mailOptions);
 
     return NextResponse.json(
-      { message: 'Email sent successfully' },
+      { message: "Email sent successfully" },
       { status: 200 }
-    )
-
+    );
   } catch (error) {
-    console.error('Email sending error:', error)
+    console.error("Email sending error:", error);
     return NextResponse.json(
-      { error: 'Failed to send email' },
+      { error: "Failed to send email" },
       { status: 500 }
-    )
+    );
   }
-} 
+}
