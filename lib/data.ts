@@ -35,7 +35,8 @@ export const featuredNFTs: NFT[] = [
     price: "2.5 ETH",
     image: "/images/nft-1.svg",
     category: "Abstract",
-    description: "A mesmerizing digital artwork exploring the depths of space and consciousness."
+    description:
+      "A mesmerizing digital artwork exploring the depths of space and consciousness.",
   },
   {
     id: "2",
@@ -44,7 +45,7 @@ export const featuredNFTs: NFT[] = [
     price: "1.8 ETH",
     image: "/images/nft-2.svg",
     category: "Cyberpunk",
-    description: "Vibrant neon-lit cityscape with futuristic aesthetics."
+    description: "Vibrant neon-lit cityscape with futuristic aesthetics.",
   },
   {
     id: "3",
@@ -53,7 +54,7 @@ export const featuredNFTs: NFT[] = [
     price: "3.2 ETH",
     image: "/images/nft-3.svg",
     category: "Nature",
-    description: "Organic digital plants growing in a virtual ecosystem."
+    description: "Organic digital plants growing in a virtual ecosystem.",
   },
   {
     id: "4",
@@ -62,7 +63,8 @@ export const featuredNFTs: NFT[] = [
     price: "4.1 ETH",
     image: "/images/nft-4.svg",
     category: "Portrait",
-    description: "Fractal-based human portraits with quantum computing aesthetics."
+    description:
+      "Fractal-based human portraits with quantum computing aesthetics.",
   },
   {
     id: "5",
@@ -71,7 +73,7 @@ export const featuredNFTs: NFT[] = [
     price: "2.9 ETH",
     image: "/images/nft-5.svg",
     category: "Retro",
-    description: "Synthwave-inspired artwork with 80s nostalgia."
+    description: "Synthwave-inspired artwork with 80s nostalgia.",
   },
   {
     id: "6",
@@ -80,8 +82,8 @@ export const featuredNFTs: NFT[] = [
     price: "5.5 ETH",
     image: "/images/nft-6.svg",
     category: "Futuristic",
-    description: "Multi-dimensional holographic art pieces."
-  }
+    description: "Multi-dimensional holographic art pieces.",
+  },
 ];
 
 export const exclusiveDrops: NFT[] = [
@@ -92,7 +94,7 @@ export const exclusiveDrops: NFT[] = [
     price: "10 ETH",
     image: "/images/exclusive-1.svg",
     category: "Genesis",
-    description: "The first piece of the legendary Genesis Collection."
+    description: "The first piece of the legendary Genesis Collection.",
   },
   {
     id: "ex2",
@@ -101,7 +103,7 @@ export const exclusiveDrops: NFT[] = [
     price: "25 ETH",
     image: "/images/exclusive-2.svg",
     category: "Real Estate",
-    description: "Premium virtual land in the metaverse."
+    description: "Premium virtual land in the metaverse.",
   },
   {
     id: "ex3",
@@ -110,8 +112,8 @@ export const exclusiveDrops: NFT[] = [
     price: "15 ETH",
     image: "/images/exclusive-3.svg",
     category: "AI Art",
-    description: "Unique AI-generated artwork with human curation."
-  }
+    description: "Unique AI-generated artwork with human curation.",
+  },
 ];
 
 export const featuredArtists: Artist[] = [
@@ -121,7 +123,7 @@ export const featuredArtists: Artist[] = [
     avatar: "/images/artist-1.svg",
     bio: "Pioneering digital artist exploring the intersection of technology and creativity.",
     followers: 12500,
-    artworks: 47
+    artworks: 47,
   },
   {
     id: "a2",
@@ -129,7 +131,7 @@ export const featuredArtists: Artist[] = [
     avatar: "/images/artist-2.svg",
     bio: "Cyberpunk visionary creating immersive digital experiences.",
     followers: 8900,
-    artworks: 32
+    artworks: 32,
   },
   {
     id: "a3",
@@ -137,7 +139,7 @@ export const featuredArtists: Artist[] = [
     avatar: "/images/artist-3.svg",
     bio: "Nature-inspired digital artist blending organic and digital elements.",
     followers: 15600,
-    artworks: 58
+    artworks: 58,
   },
   {
     id: "a4",
@@ -145,8 +147,8 @@ export const featuredArtists: Artist[] = [
     avatar: "/images/artist-4.svg",
     bio: "Quantum computing artist pushing the boundaries of digital art.",
     followers: 21000,
-    artworks: 73
-  }
+    artworks: 73,
+  },
 ];
 
 export const collections: Collection[] = [
@@ -157,7 +159,7 @@ export const collections: Collection[] = [
     pieces: 25,
     image: "/images/nft-1.svg",
     description: "A groundbreaking series exploring quantum consciousness",
-    price: "2.5 ETH"
+    price: "2.5 ETH",
   },
   {
     id: "c2",
@@ -166,7 +168,7 @@ export const collections: Collection[] = [
     pieces: 18,
     image: "/images/nft-2.svg",
     description: "Cyberpunk cityscapes with neon aesthetics",
-    price: "1.8 ETH"
+    price: "1.8 ETH",
   },
   {
     id: "c3",
@@ -175,7 +177,7 @@ export const collections: Collection[] = [
     pieces: 32,
     image: "/images/nft-3.svg",
     description: "Organic digital plants in virtual ecosystems",
-    price: "3.2 ETH"
+    price: "3.2 ETH",
   },
   {
     id: "c4",
@@ -184,7 +186,7 @@ export const collections: Collection[] = [
     pieces: 15,
     image: "/images/nft-4.svg",
     description: "Fractal-based human portraits with quantum aesthetics",
-    price: "4.1 ETH"
+    price: "4.1 ETH",
   },
   {
     id: "c5",
@@ -193,7 +195,7 @@ export const collections: Collection[] = [
     pieces: 22,
     image: "/images/nft-5.svg",
     description: "Synthwave-inspired artwork with 80s nostalgia",
-    price: "2.9 ETH"
+    price: "2.9 ETH",
   },
   {
     id: "c6",
@@ -202,8 +204,8 @@ export const collections: Collection[] = [
     pieces: 28,
     image: "/images/nft-6.svg",
     description: "Multi-dimensional holographic art pieces",
-    price: "5.5 ETH"
-  }
+    price: "5.5 ETH",
+  },
 ];
 
 export const galleryImages = [
@@ -218,7 +220,7 @@ export const galleryImages = [
   "/images/gallery-9.svg",
   "/images/gallery-10.svg",
   "/images/gallery-11.svg",
-  "/images/gallery-12.svg"
+  "/images/gallery-12.svg",
 ];
 
 export const heroImages = [
@@ -227,18 +229,18 @@ export const heroImages = [
   "/images/hero-bg-3.svg",
   "/images/hero-bg-4.svg",
   "/images/hero-bg-5.svg",
-  "/images/hero-bg-6.svg"
+  "/images/hero-bg-6.svg",
 ];
 
 export const aboutImages = [
   "/images/gallery-1.svg",
   "/images/gallery-2.svg",
   "/images/gallery-3.svg",
-  "/images/gallery-4.svg"
+  "/images/gallery-4.svg",
 ];
 
 export const contactImages = [
   "/images/exclusive-1.svg",
   "/images/exclusive-2.svg",
-  "/images/exclusive-3.svg"
+  "/images/exclusive-3.svg",
 ];

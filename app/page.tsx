@@ -2,12 +2,12 @@
 
 import { useEffect, useState } from "react"
 import { motion, AnimatePresence } from "framer-motion"
-import PercentageLoader from "@/components/percentage-loader"
-import Navigation from "@/components/navigation"
+import EnhancedLoader from "@/components/enhanced-loader"
+import EnhancedNavigation from "@/components/enhanced-navigation"
 import HeroSection from "@/components/hero-section"
-import ImageGrid from "@/components/image-grid"
-import InfiniteMarquee from "@/components/infinite-marquee"
-import RippleEffect from "@/components/ripple-effect"
+import EnhancedArtGrid from "@/components/enhanced-art-grid"
+import EnhancedMarquee from "@/components/enhanced-marquee"
+import InteractiveBackground from "@/components/interactive-background"
 import ScrambledText from "@/components/scrambled-text"
 import FeaturedArtists from "@/components/featured-artists"
 import ExclusiveDrops from "@/components/exclusive-drops"
@@ -32,7 +32,7 @@ export default function HomePage() {
   return (
     <>
       <AnimatePresence>
-        {isLoading && <PercentageLoader onComplete={() => setLoadingComplete(true)} isComplete={loadingComplete} />}
+        {isLoading && <EnhancedLoader onLoadingComplete={() => setLoadingComplete(true)} />}
       </AnimatePresence>
 
       {!isLoading && (
@@ -42,8 +42,8 @@ export default function HomePage() {
           transition={{ duration: 0.5 }}
           className="min-h-screen bg-black text-white relative overflow-hidden"
         >
-          <RippleEffect />
-          <Navigation />
+          <InteractiveBackground />
+          <EnhancedNavigation />
 
           <main>
             <HeroSection />
@@ -67,7 +67,7 @@ export default function HomePage() {
                   </p>
                 </motion.div>
 
-                <ImageGrid />
+                <EnhancedArtGrid />
               </div>
             </section>
 
@@ -79,7 +79,7 @@ export default function HomePage() {
                   className="text-3xl md:text-5xl font-light tracking-wider mb-4"
                 />
               </div>
-              <InfiniteMarquee />
+              <EnhancedMarquee />
             </section>
 
             {/* Exclusive Drops Section */}

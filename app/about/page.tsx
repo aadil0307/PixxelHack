@@ -3,7 +3,7 @@
 import { motion } from "framer-motion"
 import Image from "next/image"
 import Navigation from "@/components/navigation"
-import StickyTeamList from "@/components/sticky-team-list"
+import EnhancedTeamSection from "@/components/enhanced-team-section"
 import RippleEffect from "@/components/ripple-effect"
 import ScrambledText from "@/components/scrambled-text"
 import { aboutImages } from "@/lib/data"
@@ -59,7 +59,7 @@ export default function AboutPage() {
             ))}
           </motion.div>
 
-          <StickyTeamList />
+          <EnhancedTeamSection />
 
           <motion.section
             initial={{ opacity: 0, y: 50 }}
