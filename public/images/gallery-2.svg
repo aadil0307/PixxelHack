@@ -1,0 +1,11 @@
+<svg width="600" height="600" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <linearGradient id="gradgallery-2" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" style="stop-color:hsl(327.3950122084358, 70%, 60%);stop-opacity:1" />
+        <stop offset="50%" style="stop-color:hsl(312.652043981392, 70%, 60%);stop-opacity:1" />
+        <stop offset="100%" style="stop-color:hsl(116.0439229768808, 70%, 60%);stop-opacity:1" />
+      </linearGradient>
+    </defs>
+    <rect width="600" height="600" fill="url(#gradgallery-2)"/>
+    <circle cx="398.8027744109012" cy="310.901984083951" r="60.21884666673567" fill="rgba(255,255,255,0.2)"/>
+  </svg>

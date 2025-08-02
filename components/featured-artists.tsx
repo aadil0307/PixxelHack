@@ -4,49 +4,18 @@ import { motion } from "framer-motion"
 import Image from "next/image"
 import ScrambledText from "./scrambled-text"
 import DistortedImageHover from "./distorted-image-hover"
+import { featuredArtists as artistsData } from "@/lib/data"
 
-const featuredArtists = [
-  {
-    id: 1,
-    name: "Elena Vasquez",
-    specialty: "Quantum Digital Art",
-    bio: "Pioneer in quantum-inspired digital compositions",
-    artworks: 47,
-    totalSales: "156.7 ETH",
-    image: "/placeholder.svg?height=600&width=400",
-    hoverImage: "/placeholder.svg?height=400&width=600",
-  },
-  {
-    id: 2,
-    name: "Marcus Chen",
-    specialty: "Cyberpunk Landscapes",
-    bio: "Master of neon-soaked digital environments",
-    artworks: 32,
-    totalSales: "203.4 ETH",
-    image: "/placeholder.svg?height=600&width=400",
-    hoverImage: "/placeholder.svg?height=400&width=600",
-  },
-  {
-    id: 3,
-    name: "Aria Nakamura",
-    specialty: "Generative Algorithms",
-    bio: "AI-assisted organic pattern creator",
-    artworks: 89,
-    totalSales: "298.1 ETH",
-    image: "/placeholder.svg?height=600&width=400",
-    hoverImage: "/placeholder.svg?height=400&width=600",
-  },
-  {
-    id: 4,
-    name: "David Rodriguez",
-    specialty: "Abstract Minimalism",
-    bio: "Exploring simplicity in complex digital forms",
-    artworks: 23,
-    totalSales: "87.9 ETH",
-    image: "/placeholder.svg?height=600&width=400",
-    hoverImage: "/placeholder.svg?height=400&width=600",
-  },
-]
+const featuredArtists = artistsData.map((artist, index) => ({
+  id: artist.id,
+  name: artist.name,
+  specialty: artist.bio.split(' ').slice(0, 3).join(' '),
+  bio: artist.bio,
+  artworks: artist.artworks,
+  totalSales: `${Math.floor(Math.random() * 200 + 50)}.${Math.floor(Math.random() * 9 + 1)} ETH`,
+  image: artist.avatar,
+  hoverImage: artist.avatar,
+}))
 
 export default function FeaturedArtists() {
   return (

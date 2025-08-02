@@ -3,39 +3,14 @@
 import { motion } from "framer-motion"
 import Image from "next/image"
 import ScrambledText from "./scrambled-text"
+import { exclusiveDrops } from "@/lib/data"
 
-const upcomingDrops = [
-  {
-    id: 1,
-    title: "Quantum Visions",
-    artist: "Elena Vasquez",
-    dropDate: "March 15, 2024",
-    pieces: 25,
-    startingPrice: "1.5 ETH",
-    image: "/placeholder.svg?height=500&width=400",
-    description: "A groundbreaking series exploring the intersection of quantum physics and digital art.",
-  },
-  {
-    id: 2,
-    title: "Neon Metropolis",
-    artist: "Marcus Chen",
-    dropDate: "March 22, 2024",
-    pieces: 15,
-    startingPrice: "2.0 ETH",
-    image: "/placeholder.svg?height=500&width=400",
-    description: "Cyberpunk-inspired cityscapes that blur the line between reality and imagination.",
-  },
-  {
-    id: 3,
-    title: "Organic Algorithms",
-    artist: "Aria Nakamura",
-    dropDate: "March 29, 2024",
-    pieces: 30,
-    startingPrice: "1.2 ETH",
-    image: "/placeholder.svg?height=500&width=400",
-    description: "Nature-inspired generative art created through advanced AI algorithms.",
-  },
-]
+const upcomingDrops = exclusiveDrops.map((drop, index) => ({
+  ...drop,
+  dropDate: `March ${15 + index * 7}, 2024`,
+  pieces: 20 + index * 5,
+  startingPrice: drop.price,
+}))
 
 export default function ExclusiveDrops() {
   return (
