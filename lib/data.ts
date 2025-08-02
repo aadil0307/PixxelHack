@@ -17,6 +17,16 @@ export interface Artist {
   artworks: number;
 }
 
+export interface Collection {
+  id: string;
+  title: string;
+  artist: string;
+  pieces: number;
+  image: string;
+  description: string;
+  price: string;
+}
+
 export const featuredNFTs: NFT[] = [
   {
     id: "1",
@@ -139,6 +149,63 @@ export const featuredArtists: Artist[] = [
   }
 ];
 
+export const collections: Collection[] = [
+  {
+    id: "c1",
+    title: "Quantum Dreams",
+    artist: "Alex Chen",
+    pieces: 25,
+    image: "/images/nft-1.svg",
+    description: "A groundbreaking series exploring quantum consciousness",
+    price: "2.5 ETH"
+  },
+  {
+    id: "c2",
+    title: "Neon Metropolis",
+    artist: "Maya Rodriguez",
+    pieces: 18,
+    image: "/images/nft-2.svg",
+    description: "Cyberpunk cityscapes with neon aesthetics",
+    price: "1.8 ETH"
+  },
+  {
+    id: "c3",
+    title: "Digital Flora",
+    artist: "Sarah Kim",
+    pieces: 32,
+    image: "/images/nft-3.svg",
+    description: "Organic digital plants in virtual ecosystems",
+    price: "3.2 ETH"
+  },
+  {
+    id: "c4",
+    title: "Quantum Portraits",
+    artist: "David Park",
+    pieces: 15,
+    image: "/images/nft-4.svg",
+    description: "Fractal-based human portraits with quantum aesthetics",
+    price: "4.1 ETH"
+  },
+  {
+    id: "c5",
+    title: "Retro Wave",
+    artist: "Lisa Thompson",
+    pieces: 22,
+    image: "/images/nft-5.svg",
+    description: "Synthwave-inspired artwork with 80s nostalgia",
+    price: "2.9 ETH"
+  },
+  {
+    id: "c6",
+    title: "Holographic Dreams",
+    artist: "James Wilson",
+    pieces: 28,
+    image: "/images/nft-6.svg",
+    description: "Multi-dimensional holographic art pieces",
+    price: "5.5 ETH"
+  }
+];
+
 export const galleryImages = [
   "/images/gallery-1.svg",
   "/images/gallery-2.svg",
@@ -152,4 +219,26 @@ export const galleryImages = [
   "/images/gallery-10.svg",
   "/images/gallery-11.svg",
   "/images/gallery-12.svg"
-]; 
+];
+
+export const heroImages = [
+  "/images/hero-bg-1.svg",
+  "/images/hero-bg-2.svg",
+  "/images/hero-bg-3.svg",
+  "/images/hero-bg-4.svg",
+  "/images/hero-bg-5.svg",
+  "/images/hero-bg-6.svg"
+];
+
+export const aboutImages = [
+  "/images/gallery-1.svg",
+  "/images/gallery-2.svg",
+  "/images/gallery-3.svg",
+  "/images/gallery-4.svg"
+];
+
+export const contactImages = [
+  "/images/exclusive-1.svg",
+  "/images/exclusive-2.svg",
+  "/images/exclusive-3.svg"
+];
