@@ -3,41 +3,11 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
-
-const teamMembers = [
-  { 
-    id: 1, 
-    name: "Eleanor Vance", 
-    role: "Lead Curator", 
-    image: "/images/artist-1.svg",
-    bio: "Pioneering digital art curator with 10+ years of experience in the NFT space."
-  },
-  { 
-    id: 2, 
-    name: "Marcus Thorne", 
-    role: "Digital Artist", 
-    image: "/images/artist-2.svg",
-    bio: "Award-winning digital artist specializing in generative art and AI collaboration."
-  },
-  { 
-    id: 3, 
-    name: "Aria Chen", 
-    role: "VR Specialist", 
-    image: "/images/artist-3.svg",
-    bio: "Expert in immersive experiences and virtual reality art installations."
-  },
-  { 
-    id: 4, 
-    name: "Liam Sterling", 
-    role: "Blockchain Dev", 
-    image: "/images/artist-4.svg",
-    bio: "Blockchain architect building the future of digital art infrastructure."
-  },
-];
+import { featuredArtists } from "@/lib/data";
 
 export default function EnhancedTeamSection() {
-  const [activeImage, setActiveImage] = useState(teamMembers[0].image);
-  const [activeMember, setActiveMember] = useState(teamMembers[0]);
+  const [activeImage, setActiveImage] = useState(featuredArtists[0].image);
+  const [activeMember, setActiveMember] = useState(featuredArtists[0]);
 
   return (
     <div className="relative grid grid-cols-1 md:grid-cols-2 min-h-screen gap-8 p-8 md:p-16">
@@ -105,7 +75,7 @@ export default function EnhancedTeamSection() {
           Our Curators
         </motion.h2>
         
-        {teamMembers.map((member, index) => (
+        {featuredArtists.map((member, index) => (
           <motion.div
             key={member.id}
             onMouseEnter={() => {
@@ -135,7 +105,7 @@ export default function EnhancedTeamSection() {
               className="text-lg text-neutral-400 mb-3 group-hover:text-blue-400 transition-colors"
               whileHover={{ scale: 1.01 }}
             >
-              {member.role}
+              {member.specialty}
             </motion.p>
             <motion.p 
               className="text-sm text-neutral-500 leading-relaxed"
@@ -146,7 +116,7 @@ export default function EnhancedTeamSection() {
               }}
               transition={{ duration: 0.3 }}
             >
-              {member.bio}
+              Total Sales: {member.totalSales}
             </motion.p>
             
             {/* Hover Indicator */}
